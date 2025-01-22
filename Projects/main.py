@@ -12,7 +12,7 @@ def main():
     #week 2
     mw.recursion(int(input("Enter a number >> ")))
     
-    mw.Print_square("*", 10, 10)
+    mw.Print_square("*", 10)
 
 if __name__ == "__main__":
     main()
