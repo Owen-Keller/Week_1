@@ -18,6 +18,7 @@ class week_1:
     def recursion(self, number : int):
 
         if number == 1:
+            print(number)
             return 1
         else:
             print(number)

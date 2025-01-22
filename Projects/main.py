@@ -10,7 +10,7 @@ def main():
     mw.hello()
     
     #week 2
-    print(mw.recursion(5))
+    mw.recursion(10)
     
 
 if __name__ == "__main__":
