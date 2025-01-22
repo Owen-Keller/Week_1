@@ -26,11 +26,4 @@ class week_1:
 
 
     def Print_square(self, char_1:str, width: int):
-        length = width
-
-        while length >= 1:
-            print(char_1)
-            length -= 1
-            while width >= length:
-                print("\n")
-                width-=1
+       pass
