@@ -25,3 +25,11 @@ class week_1:
             return self.recursion(number - 1)
 
 
+    def Print_square(self, char_1:str, length: int, width: int):
+
+        while length <= 1:
+
+            length -= 1
+            while width <= length:
+                print(char_1)
+                width-=1
