@@ -20,6 +20,7 @@ class week_1:
         if number == 1:
             return 1
         else:
+            print(number)
             return self.recursion(number - 1)
 
 
