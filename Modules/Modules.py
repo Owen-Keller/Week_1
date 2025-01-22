@@ -12,3 +12,15 @@ class week_1:
 
     def hello(self):
         print("Hello world")
+
+
+    
+    def recursion( self, number : int):
+
+        if self.recursion(number) == 1:
+            return 1
+        
+        else:
+            return self.recursion(number - 1)
+
+
