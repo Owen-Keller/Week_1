@@ -31,5 +31,5 @@ class week_1:
             print(char_1)
             length -= 1
             while width >= length:
-                print(char_1)
+                print("\n")
                 width-=1
