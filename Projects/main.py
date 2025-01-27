@@ -7,8 +7,7 @@ import my_modules
 
 def main():
     mm = my_modules.my_Modules()
-
-    mm.make_Job(int(input("Enter number >> ")))
+    mm.recursive_Math(990)
 
 
 

@@ -27,6 +27,14 @@ class my_Modules:
         my_job.start()
 
         my_job.join()
+
+
+    def recursive_Math(self, number:int):
+        if number ==1:
+            print("{} ::{}".format(number, number))
+            return 1
         
+        print("{} :: {}".format(number,(number -1)/number))
+        return self.recursive_Math(number-1)
 
     ###End###
