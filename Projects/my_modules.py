@@ -47,12 +47,18 @@ class my_Modules:
         return self.tuple[x], self.list[x]
     
     def add_obj(self, x:object):
+        self.tuple = list(self.tuple)
+        self.tuple.append(x)
+        self.tuple = tuple(self.tuple)
         self.list.append(x)
-        #cant append tyo a tuple they are not changeable only iterable
+        #cant append to a tuple they are not changeable only iterable
     
     def remove_obj(self, x:int):
         #cant remove items from Tuple
         try:
+            self.tuple = list(self.tuple)
+            self.tuple.pop(x)
+            self.tuple = tuple(self.tuple)
             self.list.pop(x)
         except:
             print("Index out of range")

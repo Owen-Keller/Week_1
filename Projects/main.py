@@ -22,11 +22,12 @@ def main():
     ###TUPLES CAN NOT HAVE ELEMENTS REMOVED!?! ### CLEARLY I know lol ;) ;) ####
     mm.add_obj("cheese burger") # I got a bit hungry
 
-    print("new {}th object added >> {}".format(len(mm.list),mm.list))
+    print("new {}th object added >>\n{}\n{}".format(len(mm.list),mm.list,mm.tuple))
+    print
 
     mm.remove_obj(0) #good news i had dinner!
 
-    print("new list with {} elements >> {}".format(len(mm.list), mm.list))
+    print("new list with {} elements >>\n{}\n{}".format(len(mm.list), mm.list,mm.tuple))
 
 
 
