@@ -80,6 +80,18 @@ class my_Modules:
 
 
         return lst
+    
+
+
+
+    def is_sorted(self, list:list):
+            x = 0
+            while x < (len(list) - 1):
+                if list[x] > list[x+1]:
+                    return False
+                x +=1 
+            
+            return True
 
 
     ###End###

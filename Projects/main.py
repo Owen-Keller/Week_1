@@ -3,10 +3,11 @@ Advanced Computer Language Concepts
 Owen K
 """
 #imports
-import my_modules
+from my_modules import *
+mm = my_Modules()
 
 def main():
-    mm = my_modules.my_Modules()
+   
     mm.recursive_Math(990)
     
     #week 3 content
@@ -20,18 +21,35 @@ def main():
     print("Random >> ",mm.bogo_sort())
 
     ###TUPLES CAN NOT HAVE ELEMENTS REMOVED!?! ### CLEARLY I know lol ;) ;) ####
+    
     mm.add_obj("cheese burger") # I got a bit hungry
 
     print("new {}th object added >>\n{}\n{}".format(len(mm.list),mm.list,mm.tuple))
-    print
 
     mm.remove_obj(0) #good news i had dinner!
 
     print("new list with {} elements >>\n{}\n{}".format(len(mm.list), mm.list,mm.tuple))
 
+        #got bored heres my bogo sort of 50 random objects
+    bogo_sort()
 
 
 
+def bogo_sort():
+    x = 0
+    bogo = []
+    
+    #append 50 random elements to list
+    while x <= 50:
+        bogo.append(random.randint(0, 50))
+        x+=1
+
+    #print value of element in array with "*"
+
+    for _ in range(0, bogo[1]):
+        print("*")
+
+        
 
 if __name__ == "__main__":
     main()
