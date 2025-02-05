@@ -18,14 +18,20 @@ def main():
     list_2 = [] # list 2 is using os
 
     while True:
+        value = int.from_bytes(os.urandom(1), byteorder='big')
 
-        list_1.append(random.randint(1,16))
+        if value >= 1 and value <=16:
+            list_1.append(random.randint(1,16))
+            list_2.append(value)
 
         #using list_1 as break case
         if len(list_1) == 100:
             break
+    
 
-    print(list_1)
+    #print length of the list's and shows the values sorted
+    print(len(list_2)," :: ",sorted(list_2), "\n")
+    print(len(list_1), " :: ",sorted(list_1), "\n")
 
 
 
