@@ -10,6 +10,9 @@ import multiprocessing, os, time, random, threading
 class my_Modules:
 
     def __init__(self):
+
+        #get run time
+        my_time = time.time()
         self.mp = multiprocessing
         self.list = ["A","B","C","D","E","F","G","H","I","J"]
         self.tuple = ("J","I","H","G","F","E","D","C","B","A")
@@ -82,7 +85,7 @@ class my_Modules:
         return lst
     
 
-
+    #week 4 here
 
     def is_sorted(self, list:list):
             x = 0
@@ -92,6 +95,39 @@ class my_Modules:
                 x +=1 
             
             return True
+    
+
+
+    def fill_list(self, range:int, size:int, type:int):
+        list_n = []
+        x = 0
+
+        if type == 1:
+            while x <= size:
+                list_n.append(random.randint(1,range))
+                x+=1
+        
+        elif type == 2:
+            while x <= size:
+                val = int.from_bytes(os.urandom(1))
+                if val >=1 and val <=range:
+                    list_n.append(val)
+                    x+=1 
+
+        return list_n
+    
+
+
+    #count
+    def list_obj(self, list_val:list, list_range: int):
+        list_val = sorted(list_val)
+        x = 0
+        while x <= (list_range - 1):
+            x+=1
+            print(x," appears >> ",list_val.count(x))
+        
+        print('\n')
+            
 
 
     ###End###

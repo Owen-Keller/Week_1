@@ -14,25 +14,18 @@ mm = my_Modules()
 def main():
 
     #declare lists
-    list_1 = [] # list one is using random
-    list_2 = [] # list 2 is using os
-
-    while True:
-        value = int.from_bytes(os.urandom(1), byteorder='big')
-
-        if value >= 1 and value <=16:
-            list_1.append(random.randint(1,16))
-            list_2.append(value)
-
-        #using list_1 as break case
-        if len(list_1) == 100:
-            break
-    
+    list_1 = mm.fill_list(16, 100, 1) # list one is using random
+    list_2 = mm.fill_list(16, 100, 2) # list 2 is using os.urandom
 
     #print length of the list's and shows the values sorted
-    print(len(list_2)," :: ",sorted(list_2), "\n")
-    print(len(list_1), " :: ",sorted(list_1), "\n")
+    print("List 1 >> ",len(list_1)," :: ",sorted(list_1), "\n")
+    print("List 2 >> ",len(list_2), " :: ",sorted(list_2), "\n")
 
+    #using a function in the my_Modules class to print and count items in a list.    
+    print("list_1 >>")
+    mm.list_obj(list_1, 16)
+    print("list_2 >>")
+    mm.list_obj(list_2, 16)
 
 
    
