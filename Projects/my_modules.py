@@ -89,7 +89,7 @@ class my_Modules:
                 r = random.randint(0, size)
                 list_val[_], list_val[r] = list_val[r], list_val[_]
 
-            print(list_val)
+        return list_val
 
 
 

@@ -51,8 +51,23 @@ def main():
     print("list 4 >>")
     mm.list_obj(list_4, 65535)
 
-  
-    mm.bogo_sort(list_6)
+    start = time.time()
+    list_7 = sorted(list_6) # put sorted 
+    end = time.time() - start
+    print("Runtime :: ",end ,"\t\t\t: Sorted :\n",list_7)
+
+
+    input("\n\n\t\t\tWARNING BOGO Sort has a run time of O(n!)\n\nPress Enter to Continue")
+    start = time.time()
+
+    list_8 = mm.bogo_sort(list_6)
+    end = time.time() - start
+
+    print("Runtime :: ",end ,"\t\t\t: Sorted :\n",list_8)
+
+
+
+
    
 
 if __name__ == "__main__":
