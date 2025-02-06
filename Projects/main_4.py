@@ -23,7 +23,7 @@ def main():
     list_5 = mm.fill_list(65535, 500, 1)# create a list with 500 elements from a range 1 - 65535 using random
     list_6 = mm.fill_list(65535, 500, 2)# create a list with 500 elements froma range 1 - 65535 using os.urandom
 
-    
+
 
 
 
@@ -51,11 +51,8 @@ def main():
     print("list 4 >>")
     mm.list_obj(list_4, 65535)
 
-    x=1
-    for _ in mm.run_times:
-        print("Runtime >> ",x," :: ",_)
-        x+=1
-
+  
+    mm.bogo_sort(list_6)
    
 
 if __name__ == "__main__":

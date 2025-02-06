@@ -68,27 +68,7 @@ class my_Modules:
         except:
             print("Index out of range")
 
-    def bogo_sort(self):
-        lst = []
-        x = len(self.list) -1
-        
-        while True:
-            Object = self.list[random.randint(0, x)]
-
-            if Object in lst:
-                continue
-
-            lst.append(Object)
-
-            if len(lst) == 10:
-                break
-
-
-        return lst
-    
-
     #week 4 here
-
     def is_sorted(self, list:list):
             x = 0
             while x < (len(list) - 1):
@@ -98,6 +78,19 @@ class my_Modules:
             
             return True
     
+    def bogo_sort(self, list_val:list):
+        size = len(list_val) -1
+
+        while True:
+            if self.is_sorted(list_val):
+                break
+            
+            for _ in range(0, size):
+                r = random.randint(0, size)
+                list_val[_], list_val[r] = list_val[r], list_val[_]
+
+            print(list_val)
+
 
 
     def fill_list(self, range:int, size:int, type:int):
