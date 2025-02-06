@@ -11,9 +11,11 @@ class my_Modules:
 
     def __init__(self):
 
-        #get run time
-        my_time = time.time()
+        #get start of run time
+        self.my_time =0
+        self.run_times = []
         self.mp = multiprocessing
+
         self.list = ["A","B","C","D","E","F","G","H","I","J"]
         self.tuple = ("J","I","H","G","F","E","D","C","B","A")
 
@@ -99,6 +101,7 @@ class my_Modules:
 
 
     def fill_list(self, range:int, size:int, type:int):
+        self.my_time = time.time()
         list_n = []
         x = 0
 
@@ -114,7 +117,8 @@ class my_Modules:
                 if val >=1 and val <=range:
                     list_n.append(val)
                     x+=1 
-
+        
+        self.run_times.append((time.time() -  self.my_time))
         return list_n
     
 

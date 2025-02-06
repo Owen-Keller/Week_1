@@ -47,6 +47,9 @@ def main():
     mm.list_obj(list_4, 65535)
 
 
+    for _ in mm.run_times:
+        print(_)
+
    
 
 if __name__ == "__main__":
