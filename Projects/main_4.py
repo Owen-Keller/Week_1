@@ -44,7 +44,7 @@ def main():
     #print lists 3 and 4 like 1 and 2
     
 
-     #print length of the list's and shows the values sorted
+    #print length of the list's and shows the values sorted
     print("List 3 >> ",len(list_3)," :: ",sorted(list_3), "\n")
     print("List 4 >> ",len(list_4), " :: ",sorted(list_4), "\n")
 
@@ -54,17 +54,17 @@ def main():
     print("list 4 >>")
     mm.list_obj(list_4, 65535)
 
-    start = time.time()
+    start_1 = time.time()
     list_7 = sorted(list_6) # put sorted 
-    end = time.time() - start
+    end = time.time() - start_1
     print("Runtime :: ",end ,"\t\t\t: Sorted :\n",list_7)
 
 
     input("\n\n\t\t\tWARNING BOGO Sort has a run time of O(n!)\n\nPress Enter to Continue")
-    start = time.time()
+    start_2 = time.time()
 
     list_8 = mm.bogo_sort(list_6)
-    end = time.time() - start
+    end = time.time() - start_2
 
     print("Runtime :: ",end ,"\t\t\t: Sorted :\n",list_8)
 
