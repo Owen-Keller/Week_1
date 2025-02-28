@@ -62,6 +62,7 @@ class mid_module:
 
     def __init__(self):
         self.array = ["NVDA","AAPL","AMZN","KO","TM","GE"]
+        self.file_name = []
 
     
     def rand_stock(self):
@@ -132,15 +133,25 @@ class mid_module:
                 Fname = i+"-"+str(datetime.datetime.today())[:7]+".csv"
 
                 if Fname not in name:
-                    name.append(Fname)
+                    name.append(Fname+"\n")
                     count = len(name)
                     csv_Data.to_csv(Fname)
-            
+
+        with open("CSV_DATA.txt", 'w') as f:
+            f.writelines(name)
+            f.close
 
         
 # calculate short-term trend using pandas 
     def calc_SMA50(self):
-        short_W = 50
+            f_names = []
+            with open("CSV_DATA.txt", 'r') as f:
+                for line in f:
+                    f_names.append(line.strip())
+                f.close
+            for _ in f_names:
+                rel = pd.read_csv(_, index_col='Date', parse_dates=True)
+                print(rel.head())
         
 
 
