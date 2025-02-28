@@ -112,30 +112,26 @@ class mid_module:
 
     def write_CSV(self):
         
-        pattern = []
         name = []
-        count = 0
+       
         Fname = ""
-        for _ in self.array:
-            pattern.append(_)
-
 
         while True:
-            if count == len(pattern):
+            if len(name) == len(self.array):
                 break
 
             csv_Data = self.gen_Data()
         
-            for i in pattern:
+            for i in self.array:
                 x = re.search(i, str(csv_Data))
                 if x == None:
                     continue
                 Fname = i+"-"+str(datetime.datetime.today())[:7]+".csv"
 
-                if Fname not in name:
-                    name.append(Fname+"\n")
-                    count = len(name)
-                    csv_Data.to_csv(Fname)
+            if Fname in name:
+                continue
+            csv_Data.to_csv(Fname)
+            name.append(Fname+"\n")
 
         with open("CSV_DATA.txt", 'w') as f:
             f.writelines(name)
@@ -149,8 +145,10 @@ class mid_module:
                 for line in f:
                     f_names.append(line.strip())
                 f.close
+            
+            print(f_names)
             for _ in f_names:
-                rel = pd.read_csv(_, index_col='Date', parse_dates=True)
+                rel = pd.read_csv(_, index_col='Price', parse_dates=True)
                 print(rel.head())
         
 
