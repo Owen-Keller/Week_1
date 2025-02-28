@@ -6,7 +6,7 @@ Owen Keller
 """
 
 #imports
-import random, math, csv,requests, alpha_vantage, datetime
+import random, math, csv,requests, alpha_vantage, datetime, re, os
 
 import yfinance as yf
 
@@ -89,7 +89,7 @@ class mid_module:
 
             return New_Date
         
-        tick = self.rand_stock() # Gets random stock that is in list
+        tick = self.rand_stock() # Gets random stock that is wihin list
         start_Date = get_StartDate(random.randint(10, 20)) #gets a random start date between 10 - 20 years ago
         end_Date = get_EndDate() #current date
 
@@ -103,7 +103,47 @@ class mid_module:
             self.array.append(Stock)
         except(TypeError):
             print("invalid data type")
-    
+
+
+    def write_CSV(self):
+        
+        pattern = []
+        name = []
+        count = 0
+        Fname = ""
+        for _ in self.array:
+            pattern.append(_)
+
+
+        while True:
+            if count == len(pattern):
+                break
+
+            csv_Data = self.gen_Data()
+        
+            for i in pattern:
+                x = re.search(i, str(csv_Data))
+                if x == None:
+                    continue
+                Fname = i+"-"+str(datetime.datetime.today())[:7]+".csv"
+
+                if Fname not in name:
+                    name.append(Fname)
+                    count = len(name)
+                    csv_Data.to_csv(Fname)
+            
+            
+
+
+
+        
+
+
+        
+    #calculate short-term trend
+    def calc_SMA50(self):
+        short_W = 50
+
 
 
 
