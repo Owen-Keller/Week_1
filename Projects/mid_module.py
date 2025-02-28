@@ -146,7 +146,6 @@ class mid_module:
                     f_names.append(line.strip())
                 f.close
             
-            print(f_names)
             for _ in f_names:
                 rel = pd.read_csv(_, index_col='Price', parse_dates=True)
                 print(rel.head())
