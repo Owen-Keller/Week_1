@@ -14,7 +14,7 @@ def main():
     mm = mid_module()
     mm.write_CSV()
     mm.calc_SMA50()
-    print(mm.cwd)
+    
     
 
 if __name__ == "__main__":

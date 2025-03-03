@@ -1,6 +1,6 @@
+/media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/KO-2025-03.csv
+/media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/AAPL-2025-03.csv
 /media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/TM-2025-03.csv
-/media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/AMZN-2025-03.csv
-/media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/NVDA-2025-03.csv
+/media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/KO-2025-03.csv
 /media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/AAPL-2025-03.csv
 /media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/AMZN-2025-03.csv
-/media/septimusflamel/Booger_Aids/Shepherd_Semester_2/Adv_Comp_Lang/Stock_Info/AAPL-2025-03.csv
