@@ -1,6 +1,0 @@
-NVDA-2025-02.csv
-NVDA-2025-02.csv
-AMZN-2025-02.csv
-KO-2025-02.csv
-KO-2025-02.csv
-AAPL-2025-02.csv

@@ -7,7 +7,7 @@ Owen Keller
 
 #imports
 import random, math, csv,requests, alpha_vantage, datetime, re, os
-
+from pathlib import Path
 import yfinance as yf
 
 import pandas as pd
@@ -62,6 +62,7 @@ class mid_module:
 
     def __init__(self):
         self.array = ["NVDA","AAPL","AMZN","KO","TM","GE"]
+        self.cwd = str(Path.cwd()) + "/Stock_Info"
         self.file_name = []
 
     
@@ -130,10 +131,10 @@ class mid_module:
 
             if Fname in name:
                 continue
-            csv_Data.to_csv(Fname)
-            name.append(Fname+"\n")
+            csv_Data.to_csv(self.cwd+"/"+Fname)
+            name.append(self.cwd+"/"+Fname+"\n")
 
-        with open("CSV_DATA.txt", 'w') as f:
+        with open(self.cwd+"/"+"CSV_DATA.txt", 'w') as f:
             f.writelines(name)
             f.close
 
@@ -141,7 +142,7 @@ class mid_module:
 # calculate short-term trend using pandas 
     def calc_SMA50(self):
             f_names = []
-            with open("CSV_DATA.txt", 'r') as f:
+            with open(self.cwd +"/"+"CSV_DATA.txt", 'r') as f:
                 for line in f:
                     f_names.append(line.strip())
                 f.close
