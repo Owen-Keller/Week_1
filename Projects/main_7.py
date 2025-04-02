@@ -51,7 +51,7 @@ def process_input(data: str):
     operator = ''
 
     data = data.replace(" ","")
-
+    #yes I know slow run time dont mention it its a disgrace
     for _ in data:
 
         if _.isdigit() is False:
