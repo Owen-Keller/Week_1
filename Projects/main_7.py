@@ -42,17 +42,67 @@ def main():
 
 
 def process_input(data: str):
+   
+    char = ""
+    char_2 = ""
     numbers = []
+    midx = 0
+    n = 0
     operator = ''
 
-    data = data.replace(" ", "")
-    for char in data:
-        if char.isdigit():
-           numbers.append(int(char))
-        else:
-            operator = char
+    data = data.replace(" ","")
+
+    for _ in data:
+
+        if _.isdigit() is False:
+            operator = str(_)
+            midx = n
+        n+=1
+    
+    for _ in range(0, midx):
+        char+=data[_]
+    
+    for _ in range(midx+1, len(data)):
+        char_2+=data[_]
+
+
+
+    numbers.append(char)
+    numbers.append(char_2)
+    
     return numbers, operator
 
+
+def test(data:str):
+
+    char = ""
+    char_2 = ""
+    numbers = []
+    midx = 0
+    n = 0
+    operator = ''
+
+    data = data.replace(" ","")
+
+    for _ in data:
+
+        if _.isdigit() is False:
+            operator = str(_)
+            midx = n
+        n+=1
+    
+    for _ in range(0, midx):
+        char+=data[_]
+    
+    for _ in range(midx+1, len(data)):
+        char_2+=data[_]
+
+
+
+    numbers.append(char)
+    numbers.append(char_2)
+    
+    return numbers, operator
 # Method to perform calculation with processed input
 def calc_input(numbers: list, operator: str):
     global Comp_out
@@ -69,6 +119,7 @@ def calc_input(numbers: list, operator: str):
             value = input_1 * input_2
         case "/":
             value = float(input_1) / float(input_2)
+            value = round(value, 3)
     
     message = "= " + str(value)
     Comp_out.config(text=message)
